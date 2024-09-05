@@ -1,0 +1,122 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:rgb(76, 151, 147);
+}
+main{
+    margin:5% auto 10px;
+    padding:30px;
+    background-color:lightgray;
+    text-align:center;
+    border-radius:30px;
+}
+
+.inputStyle{
+    display:flex;
+    justify-content: space-between;
+}
+
+.inputStyle button{
+    padding:10px;
+    outline:none;
+    border:none;
+}
+.inputStyle input{
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    
+    flex:1;
+    padding:10px;
+    outline:none;
+    border:none;
+}
+.toDoList ul{
+    overflow:auto;
+    height:250px;
+    border-radius:30px;
+    list-style: none;
+    margin:0px;
+    padding: 0 5px;
+}
+.toDoList ul li{
+    border-radius:30px;
+
+    background-color:rgb(218, 208, 208);
+    position: relative;
+    margin:5px 0px;
+    font-size:1.1em;
+    padding:10px 50px;
+    color:white;
+    transition: all .3s;
+    user-select: none;
+}
+
+.toDoList ul li::before{
+    content:'';
+    position:absolute;
+    background-image: url('/images/unchecked.png');
+    background-size:cover;
+    background-position:center;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    left:20px;
+    top:14px;
+    
+}
+
+.toDoList ul li:nth-child(odd){
+    background-color:darkgray;
+}
+.toDoList ul li:hover{
+    background-color:chartreuse;
+    color: black;
+}
+
+/* close icon style */
+.close{
+    position: absolute;
+    right: 0;
+    top:0;
+    height:50%;
+    font-size:1.1em;
+    padding:13px 7px;
+    display:flex;
+    top:25%;
+    margin-right:20px;
+    align-items:center;
+    cursor: pointer;
+    border-radius:50%;
+    background-color:red;
+    color:white;
+}   
+/* close icon on hover */
+.close:hover{
+    background-color:rgb(80, 20, 20);
+}
+
+/* line throgh after pressed the LI item*/
+
+.cheacked{
+    padding-left:30px;
+    color: white !important;
+    text-decoration:line-through;
+    background-color:black !important;
+}
+.cheacked::after{
+    content:'';
+    position: absolute;
+    background-image:url('/images/checked.png');
+    background-size:cover;
+    width:20px;
+    height:20px;
+     left:20px;
+    top:14px;
+
+}
+
+
